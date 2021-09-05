@@ -1,13 +1,13 @@
-DavidSoucany_6_02092021
+
 
 6ème projet de la <a href= 'https://openclassrooms.com/fr/paths/185/projects/676/assignment'>formation de développeur web de OpenClassrooms</a>
 
-Scénario : 
+<h2>Scénario :</h2>
 
 Développement d'une application web nommée "Piquante" dans laquelle les utilisateurs pourront ajouter leurs sauces préférées et liker ou disliker les sauces proposées par les autres utilisateurs.
 Le but est de créer le backend de l'application, le frontend étant déjà codé et fourni.
 
-Objectifs : 
+<h2>Objectifs :</h2>
 
 Développement Backend en Javascript
 
@@ -19,7 +19,7 @@ Développement Backend en Javascript
 - API REST
 - Sécurité OWASP et RGPD
 
-Mesures de sécurité mises en place :
+<h2>Mesures de sécurité mises en place :</h2>
 
 - Hashage du mot de passe utilisateur avec bcrypt
 - Manupulation sécurisée de la base de donnée avec mongoose
@@ -28,17 +28,17 @@ Mesures de sécurité mises en place :
 - Authentification de l'utilisateur par token avec jsonwebtoken
 - Protection des headers avec helmet
 
-Test de l'application :
+<h2>Test de l'application :</h2>
 
 - Cloner Front
 
-1. Cloner le frontend de l'application (https://github.com/David93400/DavidSoucany_6_02092021/tree/main/frontend)
+1. Cloner le <a href='https://github.com/David93400/DavidSoucany_6_02092021/tree/main/frontend'>frontend</a> de l'application.
 2. Installer les dépendances : npm install
 3. Lancer : npm start
 
 - Cloner Back
 
-1. Cloner le backend de l'application (https://github.com/David93400/DavidSoucany_6_02092021/tree/main/backend)
+1. Cloner le <a href='https://github.com/David93400/DavidSoucany_6_02092021/tree/main/backend'>backend</a> de l'application.
 2. Pour le projet le fichier .env n'est pas ignoré dans gitignore.
 3. installer les dépendances : npm install
 4. lancer nodemon serve
