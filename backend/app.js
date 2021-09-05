@@ -1,13 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const helmet = require('helmet');
+
+require('dotenv').config();
 
 const userRoutes = require('./routes/user');
 const sauceRoutes = require('./routes/sauce');
 
+// Lancement de Express
+
 const app = express();
 
-// Gestion des erreurs de CORS
+// Configuration CORS
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,18 +27,25 @@ app.use((req, res, next) => {
   next();
 });
 
+// Activation de Helmet pour sécuriser les headers
+
+app.use(helmet());
+
 // Connexion à la DB
 
 mongoose
-  .connect(
-    'mongodb+srv://david:0010589@test.tpj63.mongodb.net/P6?retryWrites=true&w=majority',
+  .connect(process.env.SECRET_DB,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 
+// Body-parser
+
 app.use(express.json());
+
+// Routes
 
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
