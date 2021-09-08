@@ -2,7 +2,6 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
-
 // Sign up avec mdp crypté
 
 exports.signup = (req, res, next) => {

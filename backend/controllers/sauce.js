@@ -89,7 +89,7 @@ exports.likeSauce = (req, res, next) => {
               { _id: sauceId },
               { $pull: { usersLiked: userId }, $inc: { likes: -1 } }
             )
-              .then(() => res.status(200).json({ message: "nothing" }))
+              .then(() => res.status(200).json({ message: "neutre" }))
               .catch((error) => res.status(400).json({ error }));
           }
           if (sauce.usersDisliked.includes(userId)) {
@@ -97,7 +97,7 @@ exports.likeSauce = (req, res, next) => {
               { _id: sauceId },
               { $pull: { usersDisliked: userId }, $inc: { dislikes: -1 } }
             )
-              .then(() => res.status(200).json({ message: "nothing" }))
+              .then(() => res.status(200).json({ message: "neutre" }))
               .catch((error) => res.status(400).json({ error }));
           }
         })
@@ -119,3 +119,5 @@ exports.likeSauce = (req, res, next) => {
       console.log(error);
   }
 };
+
+
